@@ -188,8 +188,8 @@ void CSVWriter::write_cell(int row, int column, std::string data) {
 
   do {
     lseek(fildes, 0, SEEK_SET);
-    status = write(fildes, str.c_str(), str.length());
-  } while (status != str.length());
+    status = write(fildes, str.c_str(), static_cast<int>(str.length()));
+  } while (status != static_cast<int>(str.length()));
 
   do {
     status = lseek(fildes, 0, SEEK_SET);

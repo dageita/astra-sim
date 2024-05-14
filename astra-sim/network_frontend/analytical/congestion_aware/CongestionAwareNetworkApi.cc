@@ -66,13 +66,15 @@ int CongestionAwareNetworkApi::sim_send(
   // create chunk
   auto chunk_arrival_arg = std::tuple(tag, src, dst, count, chunk_id);
   auto arg = std::make_unique<decltype(chunk_arrival_arg)>(chunk_arrival_arg);
-  const auto arg_ptr = static_cast<void*>(arg.release());
+  // const auto arg_ptr = static_cast<void*>(arg.release());
+  const auto arg_ptr = static_cast<decltype(arg.get())>(arg.release());
   const auto route = topology->route(src, dst);
   auto chunk = std::make_unique<Chunk>(
       count, route, CongestionAwareNetworkApi::process_chunk_arrival, arg_ptr);
 
   // initiate transmission from src -> dst.
   topology->send(std::move(chunk));
+  delete arg_ptr;
 
   // return
   return 0;

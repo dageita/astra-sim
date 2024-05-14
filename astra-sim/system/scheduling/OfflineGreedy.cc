@@ -177,7 +177,7 @@ std::vector<int> OfflineGreedy::get_chunk_scheduling(
             for (uint64_t searchDim = 0; searchDim < dim_elapsed_time.size();
                  searchDim++) {
               if (dim_elapsed_time[searchDim].dim_num ==
-                  static_cast<uint64_t>(myDim)) {
+                  static_cast<int>(myDim)) {
                 myReordered[myDim] = dim_elapsed_time[searchDim];
                 break;
               }
@@ -254,7 +254,7 @@ std::vector<int> OfflineGreedy::get_chunk_scheduling(
             for (uint64_t searchDim = 0; searchDim < dim_elapsed_time.size();
                  searchDim++) {
               if (dim_elapsed_time[searchDim].dim_num ==
-                  static_cast<uint64_t>(myDim)) {
+                  static_cast<int>(myDim)) {
                 myReordered[myDim] = dim_elapsed_time[searchDim];
                 break;
               }

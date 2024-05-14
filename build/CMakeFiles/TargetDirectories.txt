@@ -1,0 +1,3 @@
+/home/legion/wangxf35/astra-sim/build/CMakeFiles/AstraSim.dir
+/home/legion/wangxf35/astra-sim/build/CMakeFiles/edit_cache.dir
+/home/legion/wangxf35/astra-sim/build/CMakeFiles/rebuild_cache.dir

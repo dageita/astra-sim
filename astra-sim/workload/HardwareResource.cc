@@ -14,8 +14,8 @@ using namespace Chakra;
 typedef ChakraProtoMsg::NodeType ChakraNodeType;
 
 HardwareResource::HardwareResource(uint32_t num_npus)
-    : num_npus(num_npus), num_in_flight_cpu_ops(0), num_in_flight_gpu_comm_ops(0), 
-    num_in_flight_gpu_comp_ops(0) {}
+    : num_npus(num_npus), num_in_flight_cpu_ops(0), num_in_flight_gpu_comp_ops(0), num_in_flight_gpu_comm_ops(0) 
+    {}
 
 void HardwareResource::occupy(const shared_ptr<Chakra::ETFeederNode> node) {
   if (node->is_cpu_op()) {
