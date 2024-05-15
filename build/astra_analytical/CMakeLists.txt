@@ -16,7 +16,7 @@ if (NOT CMAKE_BUILD_TYPE)
 endif ()
 #set(CMAKE_CXX_FLAGS_DEBUG "-O0 -Wall -Wextra -Wuninitialized -Wunused-function -Wno-unused-parameter -Wno-empty-body -fsanitize=address,undefined,leak -g")
 set(CMAKE_CXX_FLAGS_DEBUG "-O0 -Wall -Wextra -Wuninitialized -Wunused-function -Wno-unused-parameter -Wno-empty-body -fsanitize=address,undefined -fno-sanitize-recover=leak -g")
-set(CMAKE_CXX_FLAGS_RELEASE "-O3 -fno-sanitize=leak")
+set(CMAKE_CXX_FLAGS_RELEASE "-O3")
 
 # Setup project
 project(AstraSim_Analytical)
