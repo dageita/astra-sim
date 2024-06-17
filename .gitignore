@@ -27,3 +27,7 @@ build/astra_garnet/result/
 
 # runs
 runs
+
+# Configuration
+inputs
+extern/graph_frontend/chakra/dlrm-et*
