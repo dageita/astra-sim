@@ -133,7 +133,6 @@ else
   compile_chakra_et
 
   # compile ASTRA-sim
-  echo "build as debug: ${build_as_debug}"
   if [[ ${build_as_debug:?} == true ]]; then
     compile_astrasim_analytical_as_debug "${build_target:?}"
   else

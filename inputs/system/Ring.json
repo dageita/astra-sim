@@ -8,9 +8,16 @@
   "reduce-scatter-implementation": ["ring"],
   "all-to-all-implementation": ["ring"],
   "collective-optimization": "baseline",
+<<<<<<< Updated upstream
   "local-mem-bw": 2048,
   "boost-mode": 0,
   "roofline-enabled": 0,
   "peak-perf": 2000,
+=======
+  "local-mem-bw": 3400,
+  "boost-mode": 0,
+  "roofline-enabled": 0,
+  "peak-perf": 60,
+>>>>>>> Stashed changes
   "trace-enabled": 0
 }
